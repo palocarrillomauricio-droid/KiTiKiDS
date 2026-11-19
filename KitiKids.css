@@ -1,0 +1,722 @@
+:root {
+    /* Paleta pastel del logo KiTi KiDS */
+    --rosa: #F48C96;
+    --rosa-suave: #FFF0F2;
+    --menta: #96D4B5;
+    --menta-suave: #EEF9F3;
+    --azul: #8EB2DD;
+    --azul-suave: #EFF5FC;
+    --amarillo: #FDE068;
+    --amarillo-suave: #FFFBEB;
+    
+    --oscuro: #263244;
+    --gris: #5C687A;
+    --crema: #FCFBF9;
+    --blanco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--oscuro);
+    background-color: var(--crema);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navbar Flotante */
+.header-wrapper {
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+    padding: 0 1.5rem;
+}
+
+.navbar {
+    max-width: 1140px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 0.65rem 1.8rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(38, 50, 68, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.logo-container img {
+    height: 80px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.25s;
+}
+
+.nav-links a:hover {
+    color: var(--rosa);
+}
+
+.btn-nav {
+    background: var(--rosa);
+    color: var(--blanco) !important;
+    padding: 0.55rem 1.3rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(244, 140, 150, 0.35);
+    transition: transform 0.2s !important;
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+}
+
+/* Portada Hero Asimétrica */
+.hero {
+    position: relative;
+    padding: 4rem 1.5rem 6rem 1.5rem;
+    background: radial-gradient(circle at 15% 20%, var(--rosa-suave) 0%, transparent 45%),
+                radial-gradient(circle at 85% 30%, var(--azul-suave) 0%, transparent 50%),
+                var(--crema);
+}
+
+/* Destellos decorativos */
+.sparkle {
+    position: absolute;
+    font-size: 1.5rem;
+    user-select: none;
+    animation: pulse 3s infinite ease-in-out;
+}
+.s1 { top: 12%; left: 6%; color: var(--menta); }
+.s2 { top: 18%; right: 46%; color: var(--amarillo); font-size: 1.8rem; }
+.s3 { bottom: 22%; left: 45%; color: var(--rosa); }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: scale(1.25) rotate(15deg); opacity: 1; }
+}
+
+.hero-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blanco);
+    padding: 0.45rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1.2rem;
+}
+
+.pill-badge .dot {
+    width: 9px;
+    height: 9px;
+    background: var(--menta);
+    border-radius: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3.3rem;
+    line-height: 1.12;
+    margin-bottom: 1.2rem;
+}
+
+.highlight-rosa { color: var(--rosa); }
+.highlight-azul { color: var(--azul); }
+
+.hero-desc {
+    font-size: 1.15rem;
+    color: var(--gris);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--oscuro);
+    color: var(--blanco);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(38, 50, 68, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: var(--rosa);
+}
+
+.btn-ghost {
+    background: var(--blanco);
+    color: var(--oscuro);
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #E2E8F0;
+    transition: border-color 0.2s;
+}
+
+.btn-ghost:hover {
+    border-color: var(--azul);
+}
+
+/* Marco orgánico e insignias flotantes */
+.hero-visual {
+    position: relative;
+}
+
+.blob-frame {
+    border-radius: 42% 58% 48% 52% / 45% 42% 58% 55%;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(142, 178, 221, 0.28);
+    border: 8px solid var(--blanco);
+    aspect-ratio: 4 / 3.6;
+}
+
+.blob-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-card {
+    position: absolute;
+    background: var(--blanco);
+    padding: 0.75rem 1.1rem;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 12px 28px rgba(38, 50, 68, 0.1);
+    animation: float 4s ease-in-out infinite;
+}
+
+.fc-top {
+    top: 12px;
+    left: -18px;
+}
+
+.fc-bottom {
+    bottom: 18px;
+    right: -12px;
+    animation-delay: 2s;
+}
+
+.fc-icon {
+    font-size: 1.5rem;
+    background: var(--amarillo-suave);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.floating-card small {
+    color: var(--gris);
+    font-size: 0.78rem;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-7px); }
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    width: 100%;
+    height: 55px;
+}
+
+/* Sección Método Bento */
+.section-white {
+    background: var(--blanco);
+    padding: 4rem 0;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.bento-card {
+    padding: 2rem;
+    border-radius: 24px;
+    transition: transform 0.25s;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+}
+
+.bento-rosa { background: var(--rosa-suave); }
+.bento-menta { background: var(--menta-suave); }
+.bento-azul { background: var(--azul-suave); }
+
+.bento-num {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    opacity: 0.45;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.bento-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+}
+
+.bento-card p {
+    color: var(--gris);
+    font-size: 0.95rem;
+}
+
+/* Sección Kits */
+.section-cream {
+    background: var(--crema);
+    padding: 4.5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sub-tag {
+    display: inline-block;
+    background: var(--amarillo-suave);
+    color: #977206;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.section-header h2 {
+    font-size: 2.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.section-header p {
+    color: var(--gris);
+}
+
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 2rem;
+}
+
+.kit-card {
+    background: var(--blanco);
+    border-radius: 26px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 12px 32px rgba(38, 50, 68, 0.05);
+    border: 2px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.kit-card:hover {
+    transform: translateY(-7px);
+}
+
+.card-rosa:hover { border-color: var(--rosa); }
+.card-azul:hover { border-color: var(--azul); }
+.card-amarillo:hover { border-color: var(--amarillo); }
+
+.kit-media {
+    position: relative;
+    height: 195px;
+}
+
+.kit-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kit-pill {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.pill-rosa { background: var(--rosa); color: var(--blanco); }
+.pill-azul { background: var(--azul); color: var(--blanco); }
+.pill-amarillo { background: var(--amarillo); color: var(--oscuro); }
+
+.kit-content {
+    padding: 1.6rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.kit-content h3 {
+    font-size: 1.55rem;
+    margin-bottom: 0.9rem;
+}
+
+.kit-items {
+    list-style: none;
+    margin-bottom: 1.4rem;
+    flex-grow: 1;
+}
+
+.kit-items li {
+    font-size: 0.92rem;
+    color: var(--gris);
+    margin-bottom: 0.65rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.kit-items li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--rosa);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.kit-items strong {
+    color: var(--oscuro);
+}
+
+.kit-bottom {
+    border-top: 1px solid #F1F5F9;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-box .amount {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1.1;
+}
+
+.price-box .bonus {
+    font-size: 0.78rem;
+    color: #2F855A;
+    font-weight: 700;
+}
+
+.btn-kit {
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.btn-kit:hover { transform: scale(1.05); }
+.btn-rosa { background: var(--rosa-suave); color: #C53030; }
+.btn-azul { background: var(--azul-suave); color: #2B6CB0; }
+.btn-amarillo { background: var(--amarillo-suave); color: #975A16; }
+
+/* Nueva Sección Juegos Individuales S/ 15 */
+.individual-banner {
+    margin-top: 2.5rem;
+    background: var(--blanco);
+    border: 2px dashed var(--rosa);
+    border-radius: 24px;
+    padding: 1.8rem 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    box-shadow: 0 10px 25px rgba(244, 140, 150, 0.08);
+}
+
+.ind-left {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    flex: 1;
+    min-width: 280px;
+}
+
+.ind-price-tag {
+    background: var(--amarillo);
+    color: var(--oscuro);
+    padding: 0.8rem 1.2rem;
+    border-radius: 18px;
+    text-align: center;
+    flex-shrink: 0;
+    transform: rotate(-3deg);
+    box-shadow: 0 6px 15px rgba(253, 224, 104, 0.45);
+}
+
+.ind-precio {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1.1;
+}
+
+.ind-price-tag small {
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.ind-left h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.25rem;
+}
+
+.ind-left p {
+    color: var(--gris);
+    font-size: 0.94rem;
+    max-width: 560px;
+}
+
+.btn-ind {
+    background: var(--rosa);
+    color: var(--blanco);
+    padding: 0.85rem 1.6rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 16px rgba(244, 140, 150, 0.35);
+    transition: transform 0.2s;
+    white-space: nowrap;
+}
+
+.btn-ind:hover {
+    transform: translateY(-2px);
+}
+
+/* Banner App & Colegios */
+.app-showcase {
+    margin-top: 1.5rem;
+    background: linear-gradient(120deg, var(--azul-suave) 0%, var(--menta-suave) 100%);
+    border-radius: 24px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.app-badge {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #2B6CB0;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.app-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.app-info p {
+    color: var(--gris);
+    max-width: 600px;
+    font-size: 0.95rem;
+}
+
+.btn-app {
+    background: var(--oscuro);
+    color: var(--blanco);
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Contacto Tarjeta Integrada */
+.contact-card {
+    background: var(--crema);
+    border-radius: 30px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    border: 2px solid #F1F5F9;
+}
+
+.contact-left h2 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+}
+
+.contact-left p {
+    color: var(--gris);
+    margin-bottom: 1.5rem;
+}
+
+.social-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.s-pill {
+    background: var(--blanco);
+    padding: 0.75rem 1.1rem;
+    border-radius: 14px;
+    font-size: 0.92rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.contact-form input,
+.contact-form select {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border-radius: 14px;
+    border: 2px solid #E2E8F0;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: var(--blanco);
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--azul);
+}
+
+.hidden-input {
+    display: none;
+    border-color: var(--rosa) !important;
+}
+
+.btn-submit {
+    background: var(--menta);
+    color: var(--oscuro);
+    border: none;
+    padding: 0.95rem;
+    border-radius: 50px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(150, 212, 181, 0.45);
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--blanco);
+    color: var(--gris);
+    font-size: 0.9rem;
+}
+
+footer img {
+    height: 90px;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 850px) {
+    .hero-grid,
+    .bento-grid,
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+    .hero-text h1 { font-size: 2.4rem; }
+    .nav-links { display: none; }
+    .fc-top { left: 0; }
+    .fc-bottom { right: 0; }
+    .ind-left { flex-direction: column; align-items: flex-start; }
+}

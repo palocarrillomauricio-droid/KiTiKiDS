@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiTi KiDS | Juegos Físicos + App Educativa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="KitiKids.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación Flotante -->
+    <header class="header-wrapper">
+        <nav class="navbar">
+            <a href="#" class="logo-container">
+                <img src="IMG/logo.png" alt="Logo KiTi KiDS">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#metodo">Método Híbrido</a></li>
+                <li><a href="#kits">Kits y Juegos</a></li>
+                <li><a href="#app">App APK</a></li>
+                <li><a href="#contacto" class="btn-nav">Hacer Pedido ✨</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portada Asimétrica con Armonía Visual -->
+    <section class="hero">
+        <span class="sparkle s1">✦</span>
+        <span class="sparkle s2">★</span>
+        <span class="sparkle s3">✦</span>
+
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="pill-badge">
+                    <span class="dot"></span> De 5 a 10 años 
+                </div>
+                <h1>
+                    Menos pantalla pasiva, más <span class="highlight-rosa">mente</span> <span class="highlight-azul">brillante</span>
+                </h1>
+                <p class="hero-desc">
+                    <strong>Kit híbrido (juegos físicos + app móvil)</strong> que entrena la memoria, atención y lenguaje de forma divertida.
+                </p>
+                <div class="hero-actions">
+                    <a href="#kits" class="btn-primary">Explorar Kits y Juegos</a>
+                    <a href="#metodo" class="btn-ghost">¿Cómo funciona?</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="blob-frame">
+                    <img src="IMG/MAIN.png" alt="Niños aprendiendo jugando con KiTi KiDS">
+                </div>
+                <div class="floating-card fc-top">
+                    <span class="fc-icon">🧩</span>
+                    <div>
+                        <strong>Kits o Individuales</strong>
+                        <small>Desde S/ 15.00 c/u</small>
+                    </div>
+                </div>
+                <div class="floating-card fc-bottom">
+                    <span class="fc-icon">📱</span>
+                    <div>
+                        <strong>+ App Móvil APK</strong>
+                        <small>Incluida sin anuncios</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 45C240 95 480 0 720 45C960 90 1200 10 1440 45V90H0V45Z" fill="#FFFFFF"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sección Método Híbrido (Diseño Bento Limpio) -->
+    <section id="metodo" class="section-white">
+        <div class="container">
+            <div class="bento-grid">
+                <div class="bento-card bento-rosa">
+                    <span class="bento-num">01</span>
+                    <h3>El Problema</h3>
+                    <p>El uso pasivo de celulares reduce la concentración y retención en niños de primaria.</p>
+                </div>
+                <div class="bento-card bento-menta">
+                    <span class="bento-num">02</span>
+                    <h3>Juego Tangible</h3>
+                    <p>Tarjetas, tableros magnéticos y texturas que activan sus sentidos fuera de la pantalla.</p>
+                </div>
+                <div class="bento-card bento-azul">
+                    <span class="bento-num">03</span>
+                    <h3>Reto Digital (APK)</h3>
+                    <p>Cada kit desbloquea niveles y seguimiento de logros en nuestra app educativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Kits y Juegos Individuales -->
+    <section id="kits" class="section-cream">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-tag">Colección KiTi KiDS</span>
+                <h2>Elige un Kit completo o juegos sueltos</h2>
+                <p>Los kits incluyen 3 juegos físicos + acceso gratuito a la App móvil</p>
+            </div>
+
+            <div class="kits-grid">
+                <!-- KIT 1 -->
+                <article class="kit-card card-rosa">
+                    <div class="kit-media">
+                        <img src="IMG/KIT1.jfif" alt="Kit 1 Ojo de Lince">
+                        <span class="kit-pill pill-rosa">Atención y Concentración</span>
+                    </div>
+                    <div class="kit-content">
+                        <h3>Ojo de Lince</h3>
+                        <ul class="kit-items">
+                            <li><strong>Ojo de Espía:</strong> Visor de color que revela dibujos secretos.</li>
+                            <li><strong>Laberinto Galáctico:</strong> Tablero cerrado con guía magnética.</li>
+                            <li><strong>Caza Sombras:</strong> Búsqueda rápida de siluetas superpuestas.</li>
+                        </ul>
+                        <div class="kit-bottom">
+                            <div class="price-box">
+                                <span class="amount">S/ 40.00</span>
+                                <span class="bonus">✓ Kit 3 juegos + App</span>
+                            </div>
+                            <a href="#contacto" class="btn-kit btn-rosa" onclick="seleccionarKit('kit1')">Pedir Kit</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- KIT 2 -->
+                <article class="kit-card card-azul">
+                    <div class="kit-media">
+                        <img src="IMG/KIT2.jfif" alt="Kit 2 Mente Brillante">
+                        <span class="kit-pill pill-azul">Memoria y Percepción</span>
+                    </div>
+                    <div class="kit-content">
+                        <h3>Mente Brillante</h3>
+                        <ul class="kit-items">
+                            <li><strong>Memoria Flash:</strong> Replica patrones de color en segundos.</li>
+                            <li><strong>Toca y Encuentra:</strong> Empareja texturas (lija, lana, algodón).</li>
+                            <li><strong>Inspector Despistado:</strong> Descubre qué pieza falta en el tablero.</li>
+                        </ul>
+                        <div class="kit-bottom">
+                            <div class="price-box">
+                                <span class="amount">S/ 40.00</span>
+                                <span class="bonus">✓ Kit 3 juegos + App</span>
+                            </div>
+                            <a href="#contacto" class="btn-kit btn-azul" onclick="seleccionarKit('kit2')">Pedir Kit</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- KIT 3 -->
+                <article class="kit-card card-amarillo">
+                    <div class="kit-media">
+                        <img src="IMG/KIT3.jfif" alt="Kit 3 Chispa Verbal">
+                        <span class="kit-pill pill-amarillo">Lenguaje y Vocabulario</span>
+                    </div>
+                    <div class="kit-content">
+                        <h3>Chispa Verbal</h3>
+                        <ul class="kit-items">
+                            <li><strong>Cuentos al Dado:</strong> 3 dados ilustrados para crear historias.</li>
+                            <li><strong>La Rueda Mágica:</strong> Discos giratorios para unir sílabas.</li>
+                            <li><strong>Rimas en Cadena:</strong> Dominó de palabras que riman u opuestas.</li>
+                        </ul>
+                        <div class="kit-bottom">
+                            <div class="price-box">
+                                <span class="amount">S/ 40.00</span>
+                                <span class="bonus">✓ Kit 3 juegos + App</span>
+                            </div>
+                            <a href="#contacto" class="btn-kit btn-amarillo" onclick="seleccionarKit('kit3')">Pedir Kit</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Nueva Tarjeta Destacada: Juegos Individuales a S/ 15 -->
+            <div class="individual-banner">
+                <div class="ind-left">
+                    <div class="ind-price-tag">
+                        <span class="ind-precio">S/ 15.00</span>
+                        <small>cada juego</small>
+                    </div>
+                    <div>
+                        <h3>🎲 ¿Prefieres armar tu propio combo? ¡Venta Individual!</h3>
+                        <p>Adquiere cualquiera de nuestros 9 juegos por separado (Ojo de Espía, Laberinto Galáctico, Memoria Flash, Cuentos al Dado y más).</p>
+                    </div>
+                </div>
+                <a href="#contacto" class="btn-ind" onclick="seleccionarKit('individual')">Pedir Juego Individual ✨</a>
+            </div>
+
+            <!-- Tarjeta Horizontal App + Colegios -->
+            <div id="app" class="app-showcase">
+                <div class="app-info">
+                    <span class="app-badge">📲 Complemento Digital</span>
+                    <h3>App KiTi KiDS (APK) + Packs Escolares</h3>
+                    <p>Desbloquea minijuegos por edades (5-10 años) y retos diarios. ¿Eres docente? Cotiza packs institucionales para tu aula.</p>
+                </div>
+                <a href="#contacto" class="btn-app" onclick="seleccionarKit('combo')">Solicitar Info / Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto y Pedido Directo -->
+    <section id="contacto" class="section-white">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-left">
+                    <span class="sub-tag">Atención Directa</span>
+                    <h2>Lleva KiTi KiDS a casa o a tu colegio</h2>
+                    <p>Entregas en ferias escolares, colegios y envíos a domicilio.</p>
+                    
+                    <div class="social-pills">
+                        <div class="s-pill">💬 WhatsApp: <strong>+51 944 710 626</strong></div>
+                        <div class="s-pill">🎥 TikTok / IG: <strong>@kitikids.pe</strong></div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias! Tu solicitud para KiTi KiDS ha sido registrada. Te escribiremos por WhatsApp.');">
+                    <input type="text" placeholder="Nombre del padre, madre o docente" required>
+                    <input type="tel" placeholder="Número de WhatsApp" required>
+                    <select id="kit-select" onchange="toggleDetalleIndividual()">
+                        <option value="kit1">Kit 1: Ojo de Lince (S/ 40.00)</option>
+                        <option value="kit2">Kit 2: Mente Brillante (S/ 40.00)</option>
+                        <option value="kit3">Kit 3: Chispa Verbal (S/ 40.00)</option>
+                        <option value="individual">Juego Individual (S/ 15.00 c/u)</option>
+                        <option value="combo">Pack Completo 3 Kits / Cotización Colegio</option>
+                    </select>
+                    <input type="text" id="detalle-individual" class="hidden-input" placeholder="Escribe qué juego(s) individual(es) deseas...">
+                    <button type="submit" class="btn-submit">Enviar Solicitud 🚀</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Minimalista -->
+    <footer>
+        <img src="IMG/logo.png" alt="KiTi KiDS">
+        <p>© 2026 KiTi KiDS · Entrenando mentes curiosas de 5 a 10 años.</p>
+    </footer>
+
+    <script>
+        function seleccionarKit(valor) {
+            const select = document.getElementById('kit-select');
+            select.value = valor;
+            toggleDetalleIndividual();
+        }
+
+        function toggleDetalleIndividual() {
+            const select = document.getElementById('kit-select');
+            const inputDetalle = document.getElementById('detalle-individual');
+            if (select.value === 'individual') {
+                inputDetalle.style.display = 'block';
+                inputDetalle.required = true;
+            } else {
+                inputDetalle.style.display = 'none';
+                inputDetalle.required = false;
+            }
+        }
+    </script>
+</body>
+</html>
